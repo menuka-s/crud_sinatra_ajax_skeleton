@@ -12,7 +12,6 @@ get '/users/login' do
 end
 
 get '/users/logout' do
-  p session[:user_id]
   session[:user_id] = nil
   redirect :'/'
 end
