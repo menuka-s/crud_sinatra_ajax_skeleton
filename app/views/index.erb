@@ -1,0 +1,11 @@
+<h1> Blog with tagging! </h1>
+
+<% if logged_in? %>
+  <a href='/posts/new'>Create a new post!</a><br>
+<% end %>
+
+<% Post.all.each do |post| %>
+  <br><a href="/posts/<%= post.id %>"><%= post.title %></a><br>
+<% end %>
+
+

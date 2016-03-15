@@ -1,0 +1,7 @@
+<h1> Tag: <%= @tag.name %> </h1>
+
+Posts containing this tag: <br><br>
+
+<% @tag.posts.each do |post| %>
+  <br><a href="/posts/<%= post.id %>"><%= post.title %></a><br>
+<% end %>

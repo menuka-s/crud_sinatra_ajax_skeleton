@@ -1,0 +1,13 @@
+<h1>Login</h1>
+<form method = "get" action = "/users/authenticate">
+  <% if @errors %>
+    <p> Wrong credentials </p>
+  <% end %>
+  <label for "email">Email</label><br>
+  <input type="text" name="email" id="email"><br><br>
+  <label for "password">Password</label><br>
+  <input type="password" name="password" id="password" class="password_entry"><br><br>
+  <input type="submit" value="Login" class="block button w-100 mar-t-2 mar-b-3 pad-2 round-1 text-c center">
+
+</form>
+

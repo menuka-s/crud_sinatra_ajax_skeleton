@@ -1,0 +1,12 @@
+<h1> Edit Post </h1>
+
+<% if logged_in? && current_user == @post.user %>
+
+  <form method='post' action="/posts/<%= @post.id %>">
+    <input type="hidden" name="_method" value="put">
+    <input type="text" name="post[title]" value = "<%= @post.title %>"><br><br>
+    <textarea rows="4" cols="50" name="post[content]"><%= @post.content %></textarea><br><br>
+    <input type="submit" value="Update Post">
+  </form>
+
+<% end %>
